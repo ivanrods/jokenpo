@@ -5,19 +5,18 @@
 }
 body{
     display: grid;
-    gap: 100px;
+    gap: 40px;
     color: white;
     font-family: "Roboto", sans-serif;
     background: rgb(0,17,36);
     background: radial-gradient(circle, rgba(0,17,36,1) 0%, rgba(14,8,64,1) 0%, rgba(1,23,72,1) 100%, rgba(0,41,72,1) 100%, rgba(1,0,255,1) 100%);
-    padding: 80px 0;
+    padding: 70px 0;
 }
-
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 350px;
     height: 110px;
     border: 1px solid white;
     border-radius: 10px;
@@ -44,7 +43,6 @@ p{
 header span{
     font-size: 35px;
 }
-
 .screen1{
     display: grid;
     gap: 20px;
@@ -52,10 +50,10 @@ header span{
     "a b"
     "c c"
     ;
-    
+    padding-top: 50px;
     align-items: center;
     margin: auto;
-    width: 90%;
+    width: 390px;
 }
 .item{
     display: flex;
@@ -84,60 +82,54 @@ header span{
    grid-area: c;
    border: 15px solid #ff5353;
 }
-.hide{
-    display: none;
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    overflow: hidden;
-    margin: -1px;
-    padding: 0px;
-    border: 0;
-    opacity: none;
-}
 .screen2{
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
     margin: auto;
     gap: 10px;
-    width: 300px;
+    width: 380px;  
 }
 .screen2 .item{
-    width: 110px;
-    height: 110px;
-    font-size: 50px;
+    width: 140px;
+    height: 140px;
+    font-size: 70px;
     
 }
+.containerYou, .containerHouse{
+    margin: 25px;
+}
 .containerYou p, .containerHouse p{
+    width: 150px;
     margin: auto;
     background: none;
     color: white;
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 17px;
+    margin-bottom: 10px;
 }
 section{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    align-items: center; 
 }
 h2{
-    font-size: 20px;
+    font-size: 40px;
     text-align: center;
 }
 button{
     background-color: white;
     color: black;
+    font-weight: bold;
     border: none;
-    padding: 9px 15px;
+    padding: 12px 30px;
+    margin: 10px;
     border-radius: 5px;
 }
 
 @media (min-width: 700px){
    
     header{
-        width: 50%;
+        width: 650px;
         height: 130px;
     }
     h1{
@@ -151,8 +143,8 @@ button{
         font-size: 40px;
     }
     .screen1{
-        width: 45%;
         gap: 50px;
+        width: 700px;
     }
     .item{
         height: 250px;
@@ -160,7 +152,9 @@ button{
         font-size: 150px;
     }
     .screen2{
-        width: 600px;
+        padding-top: 50px;
+        display: flex;
+        width: 1050px;
         gap: 35px;
     }
     .screen2 .item{
@@ -168,19 +162,18 @@ button{
         height: 250px;
         font-size: 150px;
     }
-    
     h2{
-        font-size: 60px;
-        
+        font-size: 50px;
     }
     button{
-        padding: 15px 60px;
+        padding: 15px 50px;
         border-radius: 5px;
         font-size: 20px;
+        margin: 10px 0;
     }
     .containerYou p, .containerHouse p{
-        width: 250px;
+        width: 300px;
+        margin-bottom: 25px;
         font-size: 25px;
     }
-    
 }

@@ -18,6 +18,8 @@ let divCloneYou = ''
 let divCloneHouse = ''
 let contador = 0
 
+screen2.style.display = "none";
+
 document.querySelectorAll(".screen1 .item").forEach(function(card){
     card.addEventListener('click', function(){     
 
@@ -26,9 +28,8 @@ document.querySelectorAll(".screen1 .item").forEach(function(card){
         sorted() 
         inner()
         resolt()
-        screen1.classList.toggle("hide")
-        screen2.classList.toggle("hide")
-        
+        screen1.style.display = "none";
+        screen2.style.display = ""     
         
     })
 })
@@ -43,8 +44,10 @@ function inner(){
 again.addEventListener('click', () =>{
     divCloneYou.remove()
     divCloneHouse.remove()
-    screen1.classList.toggle("hide")
-    screen2.classList.toggle("hide")
+    screen1.style.display = "";
+    screen2.style.display = "none"
+    //screen1.classList.toggle("hide")
+    //screen2.classList.toggle("hide")
     screen1.append(jo, ken, po)
 })
 
