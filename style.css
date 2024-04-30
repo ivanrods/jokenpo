@@ -5,12 +5,11 @@
 }
 body{
     display: grid;
-    gap: 40px;
     color: white;
     font-family: "Roboto", sans-serif;
     background: rgb(0,17,36);
     background: radial-gradient(circle, rgba(0,17,36,1) 0%, rgba(14,8,64,1) 0%, rgba(1,23,72,1) 100%, rgba(0,41,72,1) 100%, rgba(1,0,255,1) 100%);
-    padding: 70px 0;
+    padding: 30px 0 0 0;
 }
 header{
     display: flex;
@@ -50,7 +49,7 @@ header span{
     "a b"
     "c c"
     ;
-    padding-top: 50px;
+    padding-top: 100px;
     align-items: center;
     margin: auto;
     width: 390px;
@@ -67,6 +66,8 @@ header span{
     font-size: 80px;
     border-radius: 50%;
     text-align: center;
+    --delay: .2s;
+    animation: appear .4s var(--delay) backwards;
     
 }
 .ph-hand-fist{
@@ -77,6 +78,7 @@ header span{
 .ph-hand{
    grid-area: b;
    border: 15px solid #d5a319;
+   
 }
 .ph-hand-peace{
    grid-area: c;
@@ -88,16 +90,20 @@ header span{
     justify-content: center;
     margin: auto;
     gap: 10px;
-    width: 380px;  
+    width: 380px;
+    --delay: .2s;
+    animation: appear .4s var(--delay) backwards;
+    
 }
 .screen2 .item{
     width: 140px;
     height: 140px;
     font-size: 70px;
+  
     
 }
 .containerYou, .containerHouse{
-    margin: 25px;
+    margin: 20px;
 }
 .containerYou p, .containerHouse p{
     width: 150px;
@@ -110,24 +116,58 @@ header span{
 section{
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
+    
+    
+  
 }
 h2{
     font-size: 40px;
     text-align: center;
+    
 }
 button{
     background-color: white;
     color: black;
     font-weight: bold;
     border: none;
-    padding: 12px 30px;
+    padding: 15px 40px;
     margin: 10px;
     border-radius: 5px;
 }
+.apper{
+    --delay: .2s;
+    animation: appear .4s var(--delay) backwards;
+}
+.pulse{
+    animation: pulse 1.5s  linear
+    infinite;
+    
+}
+@keyframes pulse{
+    0%{
+        box-shadow: 0 0 0 0 rgb(50, 51, 126);
+       
+    }
+    100%{
+        box-shadow: 0 0 0 70px rgba(69, 39, 160, 0);
+       
+    }
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    50%{
+        transform: scale(1.03);
+    }
+}
 
 @media (min-width: 700px){
-   
+   body{
+    padding: 60px 0 0 0;
+   }
     header{
         width: 650px;
         height: 130px;
@@ -145,6 +185,8 @@ button{
     .screen1{
         gap: 50px;
         width: 700px;
+        padding-top: 70px;
+        
     }
     .item{
         height: 250px;
@@ -152,7 +194,7 @@ button{
         font-size: 150px;
     }
     .screen2{
-        padding-top: 50px;
+        padding-top: 80px;
         display: flex;
         width: 1050px;
         gap: 35px;

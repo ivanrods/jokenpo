@@ -75,6 +75,8 @@ function resolt(){
             break
         default:
             res.innerHTML = "LOST"
+            divCloneHouse.classList.add("pulse");
+
     }
 }
 
@@ -82,4 +84,6 @@ function show(){
     res.innerHTML = "WIN"
     contador++
     score.innerHTML = contador
+    divCloneYou.classList.add("pulse");
+    
 }
